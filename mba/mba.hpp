@@ -94,19 +94,19 @@ class multi_array {
         }
 
         T operator()(index<N> i) const {
-            return buf[idx(i)];
+            return buf.at(idx(i));
         }
 
         T& operator()(index<N> i) {
-            return buf[idx(i)];
+            return buf.at(idx(i));
         }
 
         T operator[](size_t i) const {
-            return buf[i];
+            return buf.at(i);
         }
 
         T& operator[](size_t i) {
-            return buf[i];
+            return buf.at(i);
         }
 
         const T* data() const {
